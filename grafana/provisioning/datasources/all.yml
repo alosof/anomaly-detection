@@ -1,0 +1,20 @@
+apiVersion: 1
+
+datasources:
+  - name: postgres
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    database: test
+    user: test
+    jsonData:
+      sslmode: disable
+      postgresVersion: 1200
+    secureJsonData:
+      password: test
+
+  - name: mqtt
+    type: grafana-mqtt-datasource
+    jsonData:
+      Host: mosquitto
+      Port: 1883

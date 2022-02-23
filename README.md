@@ -16,17 +16,22 @@ make
 
 ## Training a model
 
-- Generate training data
+- Configure the metrics to use by changing the `active` attribute of each metric in `config/config.yml`.
+
+
+- Generate training data.
 
 ```bash
 make data
 ```
 
-- Train a model on the generated data
+- Train a model on the generated data.
 
 ```bash
 make model
 ```
+
+- Adjust the tolerance thresholds for each metric in the `config/config.yml` file according to the evaluation results.
 
 ## Using the model
 

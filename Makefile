@@ -12,11 +12,11 @@ help:
 
 .PHONY: data ## 🔢 Generate training data
 data:
-	python metrics_generator/generate_metrics.py -d file
+	python -m metrics_generator.generate_metrics -d file
 
 .PHONY: model ## 🏋 Train model with previously generated data
 model:
-	python anomaly_detector/train_model.py
+	python -m anomaly_detector.train_model
 
 .PHONY: app ## 📲 Start the app
 app:
@@ -24,11 +24,11 @@ app:
 
 .PHONY: monitoring ## 📈 Trigger real-time system metrics measurement
 monitoring:
-	python metrics_generator/generate_metrics.py -d broker
+	python -m metrics_generator.generate_metrics -d broker
 
 .PHONY: detection ## 🕵 Run anomaly detection model
 detection:
-	python anomaly_detector/analyze_metrics.py
+	python -m anomaly_detector.analyze_metrics
 
 .PHONY: stop ## 🛑 Stop the app
 stop:

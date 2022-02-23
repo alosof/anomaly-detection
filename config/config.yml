@@ -1,0 +1,21 @@
+metrics:
+
+  cpu:
+    tolerance: 0.6
+    active: True
+
+  cpu_temp:
+    tolerance: 0.6
+    active: False
+
+  ram:
+    tolerance: 0.05
+    active: True
+
+  swap:
+    tolerance: 0.1
+    active: True
+
+  disk:
+    tolerance: 0.05
+    active: True

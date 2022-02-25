@@ -39,7 +39,7 @@ def on_message(client, userdata, msg):
 
     for i, err in enumerate(errors):
         if err > conf.tolerance(cols[i]):
-            send_alert(cursor, cols[i], real[i], preds[i], 100 * err)
+            send_alert(cursor, cols[i], preds[i], real[i], 100 * err)
             connection.commit()
             loguru.logger.warning(
                 f"ANOMALY on {cols[i]}: expected {preds[i]} +/- {100 * conf.tolerance(cols[i])}%, found {real[i]}. Error = {100 * err}"

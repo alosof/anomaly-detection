@@ -257,7 +257,7 @@
           "group": [],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT time, expected, actual, diff FROM alerts.cpu ORDER BY time DESC;",
+          "rawSql": "SELECT time, expected, actual, diff FROM alerts.cpu WHERE time < (now() - interval '1' second) ORDER BY time DESC;",
           "refId": "A",
           "select": [
             [
@@ -409,7 +409,7 @@
           "group": [],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT time, expected, actual, diff FROM alerts.cpu_temp ORDER BY time DESC;",
+          "rawSql": "SELECT time, expected, actual, diff FROM alerts.cpu_temp WHERE time < (now() - interval '1' second) ORDER BY time DESC;",
           "refId": "A",
           "select": [
             [
@@ -561,7 +561,7 @@
           "group": [],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT time, expected, actual, diff FROM alerts.ram ORDER BY time DESC;",
+          "rawSql": "SELECT time, expected, actual, diff FROM alerts.ram WHERE time < (now() - interval '1' second) ORDER BY time DESC;",
           "refId": "A",
           "select": [
             [
@@ -713,7 +713,7 @@
           "group": [],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT time, expected, actual, diff FROM alerts.swap ORDER BY time DESC;",
+          "rawSql": "SELECT time, expected, actual, diff FROM alerts.swap WHERE time < (now() - interval '1' second) ORDER BY time DESC;",
           "refId": "A",
           "select": [
             [
@@ -865,7 +865,7 @@
           "group": [],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT time, expected, actual, diff FROM alerts.disk ORDER BY time DESC;",
+          "rawSql": "SELECT time, expected, actual, diff FROM alerts.disk WHERE time < (now() - interval '1' second) ORDER BY time DESC;",
           "refId": "A",
           "select": [
             [
